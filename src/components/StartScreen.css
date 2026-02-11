@@ -1,0 +1,47 @@
+/* StartScreen.css */
+.start-screen {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--surface);
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.quiz-title {
+    font-size: 3rem;
+    background: linear-gradient(to right, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.quiz-description {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 60ch;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+.start-button {
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1rem 3rem;
+    border-radius: 9999px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px var(--primary-alpha);
+}
+
+.start-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px var(--primary-alpha);
+    filter: brightness(1.1);
+}
+
+.start-button:active {
+    transform: translateY(0);
+}

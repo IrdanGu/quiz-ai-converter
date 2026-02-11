@@ -1,0 +1,38 @@
+{
+  "id": "quiz-001",
+  "title": "General Knowledge Quiz",
+  "description": "Test your knowledge on random facts!",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What is the capital of France?",
+      "type": "single-choice",
+      "options": [
+        { "id": "o1", "text": "Berlin", "isCorrect": false },
+        { "id": "o2", "text": "Madrid", "isCorrect": false },
+        { "id": "o3", "text": "Paris", "isCorrect": true },
+        { "id": "o4", "text": "Lisbon", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Which planet is known as the Red Planet?",
+      "type": "single-choice",
+      "options": [
+        { "id": "o1", "text": "Earth", "isCorrect": false },
+        { "id": "o2", "text": "Mars", "isCorrect": true },
+        { "id": "o3", "text": "Jupiter", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "What is 2 + 2?",
+      "type": "single-choice",
+      "options": [
+        { "id": "o1", "text": "3", "isCorrect": false },
+        { "id": "o2", "text": "4", "isCorrect": true },
+        { "id": "o3", "text": "5", "isCorrect": false }
+      ]
+    }
+  ]
+}
