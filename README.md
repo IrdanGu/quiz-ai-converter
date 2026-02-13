@@ -1,73 +1,71 @@
-# React + TypeScript + Vite
+# Antigravity Quiz - AI-Powered Quiz Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web application that transforms images (notes, textbooks, diagrams) into playable quizzes using AI.
 
-Currently, two official plugins are available:
+Built to modernize studying by leveraging Google's Gemini AI to extract questions directly from study materials.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+-   **AI Quiz Generation**: Upload multiple images, and the app uses Gemini AI (OCR + Reasoning) to extract and format questions automatically.
+-   **Interactive Quiz Engine**: A smooth, state-based quiz interface with immediate feedback and scoring.
+-   **Export to JSON**: Save your generated quizzes as JSON files to share or load later.
+-   **Local Quiz Loading**: Play sample quizzes or load previously saved JSON quizzes.
+-   **Responsive Design**: Works on desktop and mobile for studying on the go.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+-   **Frontend**: React (v18), TypeScript, Vite
+-   **Styling**: Pure CSS with Variables (No frameworks, high performance)
+-   **AI Integration**: Google Generative AI SDK (`@google/generative-ai`)
+-   **State Management**: Custom React Hooks
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+-   Node.js (v18 or later recommended)
+-   Google Gemini API Key (Get one for free at [Google AI Studio](https://aistudio.google.com/app/apikey))
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/antigravity-ai-quiz.git
+    cd antigravity-ai-quiz
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3.  Start the development server:
+    ```bash
+    npm run dev
+    ```
+
+4.  Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## 📖 Usage Guide
+
+1.  **Generate a Quiz**:
+    -   On the home screen, enter your Gemini API Key.
+    -   Upload one or more images containing questions or study material.
+    -   Click "Generate Quiz".
+    -   *Note: The AI will try to extract existing questions or formulate new ones based on the text.*
+
+2.  **Take the Quiz**:
+    -   Answer questions one by one.
+    -   Get immediate feedback on correct/incorrect answers.
+    -   See your final score at the end.
+
+3.  **Save Your Work**:
+    -   After generating or finishing a quiz, click the **"Export JSON"** button to save the quiz file to your device.
+
+## 🤝 Contributing
+
+This project is a Sandbox experiment for "Agentic Coding". Feel free to fork and experiment!
+
+## 📄 License
+
+MIT
