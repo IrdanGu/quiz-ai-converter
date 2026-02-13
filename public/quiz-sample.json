@@ -1,37 +1,212 @@
 {
-  "id": "quiz-001",
-  "title": "General Knowledge Quiz",
-  "description": "Test your knowledge on random facts!",
+  "id": "quiz-github-001",
+  "title": "GitHub & Git Collaboration Quiz",
+  "description": "Kumpulan pertanyaan mengenai dasar-dasar Git, Pull Request, dan Kolaborasi GitHub.",
   "questions": [
     {
       "id": "q1",
-      "text": "What is the capital of France?",
+      "text": "Apa nama kolom dalam pembuatan Pull Request yang digunakan untuk memberikan informasi yang lebih detail mengenai PR yang dilakukan?",
       "type": "single-choice",
       "options": [
-        { "id": "o1", "text": "Berlin", "isCorrect": false },
-        { "id": "o2", "text": "Madrid", "isCorrect": false },
-        { "id": "o3", "text": "Paris", "isCorrect": true },
-        { "id": "o4", "text": "Lisbon", "isCorrect": false }
+        {
+          "id": "o1",
+          "text": "Commit Description",
+          "isCorrect": true
+        },
+        {
+          "id": "o2",
+          "text": "Commit Message",
+          "isCorrect": false
+        },
+        {
+          "id": "o3",
+          "text": "Assigness",
+          "isCorrect": false
+        },
+        {
+          "id": "o4",
+          "text": "Label",
+          "isCorrect": false
+        }
       ]
     },
     {
       "id": "q2",
-      "text": "Which planet is known as the Red Planet?",
+      "text": "Apa nama kolom dalam pembuatan Pull Request yang digunakan untuk memberikan pesan singkat mengenai PR yang dilakukan?",
       "type": "single-choice",
       "options": [
-        { "id": "o1", "text": "Earth", "isCorrect": false },
-        { "id": "o2", "text": "Mars", "isCorrect": true },
-        { "id": "o3", "text": "Jupiter", "isCorrect": false }
+        {
+          "id": "o1",
+          "text": "Commit Message",
+          "isCorrect": true
+        },
+        {
+          "id": "o2",
+          "text": "Reviewer",
+          "isCorrect": false
+        },
+        {
+          "id": "o3",
+          "text": "Label",
+          "isCorrect": false
+        },
+        {
+          "id": "o4",
+          "text": "Commit Description",
+          "isCorrect": false
+        }
       ]
     },
     {
       "id": "q3",
-      "text": "What is 2 + 2?",
+      "text": "Apa penyebab conflict pada sebuah PR?",
       "type": "single-choice",
       "options": [
-        { "id": "o1", "text": "3", "isCorrect": false },
-        { "id": "o2", "text": "4", "isCorrect": true },
-        { "id": "o3", "text": "5", "isCorrect": false }
+        {
+          "id": "o1",
+          "text": "Terdapat masalah dalam folder yang sama.",
+          "isCorrect": false
+        },
+        {
+          "id": "o2",
+          "text": "Terdapat masalah dalam baris yang sama.",
+          "isCorrect": true
+        },
+        {
+          "id": "o3",
+          "text": "Terdapat masalah dalam file yang sama.",
+          "isCorrect": false
+        },
+        {
+          "id": "o4",
+          "text": "Terdapat masalah dalam branch yang sama.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Apa yang dimaksud dengan Pull Request?",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Meminta izin untuk mengimplementasikan perubahan yang telah dilakukan.",
+          "isCorrect": true
+        },
+        {
+          "id": "o2",
+          "text": "Meminta izin untuk menarik perubahan yang telah dilakukan.",
+          "isCorrect": false
+        },
+        {
+          "id": "o3",
+          "text": "Meminta izin untuk menyimpan perubahan yang telah dilakukan.",
+          "isCorrect": false
+        },
+        {
+          "id": "o4",
+          "text": "Meminta izin untuk mengunduh perubahan yang telah dilakukan.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "Mengapa membuat portofolio menggunakan GitHub dapat dilakukan secara berkolaborasi?",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Terdapat fitur revert, memudahkan Anda dalam mengembalikan suatu perubahan sesuai saran yang diberikan.",
+          "isCorrect": false
+        },
+        {
+          "id": "o2",
+          "text": "Terdapat fitur commit, sehingga Anda dapat menyimpan setiap saran yang diberikan.",
+          "isCorrect": false
+        },
+        {
+          "id": "o3",
+          "text": "Terdapat fitur fork, sehingga orang lain dapat menyimpan portofolio secara pribadi.",
+          "isCorrect": false
+        },
+        {
+          "id": "o4",
+          "text": "Terdapat fitur pull-request dan issue yang memudahkan dalam menerima saran.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "Apakah benar bahwa GitHub dapat digunakan sebagai media atau platform untuk membuat portofolio?",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Ya",
+          "isCorrect": true
+        },
+        {
+          "id": "o2",
+          "text": "Tidak",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "Apa yang dimaksud dengan seorang kontributor?",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Seseorang yang melaporkan kendala sewaktu menggunakan repository.",
+          "isCorrect": false
+        },
+        {
+          "id": "o2",
+          "text": "Siapa saja yang tidak memiliki akses untuk melakukan perubahan dalam repository.",
+          "isCorrect": false
+        },
+        {
+          "id": "o3",
+          "text": "Siapa saja yang dapat menyalin repository ke repository pribadi.",
+          "isCorrect": false
+        },
+        {
+          "id": "o4",
+          "text": "Siapa saja yang dapat melakukan commit atau menyimpan cuplikan perubahan ke dalam repository (git push).",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Apa nama perintah dasar Git untuk menyimpan perubahan file yang ada di repository?",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Save",
+          "isCorrect": false
+        },
+        {
+          "id": "o2",
+          "text": "Commit",
+          "isCorrect": true
+        },
+        {
+          "id": "o3",
+          "text": "Add",
+          "isCorrect": false
+        },
+        {
+          "id": "o4",
+          "text": "Store",
+          "isCorrect": false
+        }
       ]
     }
   ]

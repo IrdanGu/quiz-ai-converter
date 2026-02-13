@@ -16,6 +16,7 @@ interface UseQuizReturn {
     startQuiz: () => void;
     submitAnswer: (optionId: string) => void;
     restartQuiz: () => void;
+    loadQuiz: (quiz: Quiz) => void;
 }
 
 const repository: QuizRepository = new LocalJSONAdapter();
@@ -29,7 +30,7 @@ export const useQuiz = (quizId: string): UseQuizReturn => {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        const loadQuiz = async () => {
+        const loadQuizData = async () => { // Renamed to avoid conflict with new loadQuiz method
             setStatus('loading');
             try {
                 const data = await repository.getQuiz(quizId);
@@ -41,7 +42,7 @@ export const useQuiz = (quizId: string): UseQuizReturn => {
             }
         };
 
-        loadQuiz();
+        loadQuizData();
     }, [quizId]);
 
     const startQuiz = useCallback(() => {
@@ -88,6 +89,14 @@ export const useQuiz = (quizId: string): UseQuizReturn => {
         setAnswers({});
     }, []);
 
+    const loadQuiz = useCallback((newQuiz: Quiz) => {
+        setQuiz(newQuiz);
+        setStatus('ready');
+        setCurrentQuestionIndex(0);
+        setScore(0);
+        setAnswers({});
+    }, []);
+
     const currentQuestion = quiz ? quiz.questions[currentQuestionIndex] : null;
 
     return {
@@ -100,6 +109,7 @@ export const useQuiz = (quizId: string): UseQuizReturn => {
         error,
         startQuiz,
         submitAnswer,
-        restartQuiz
+        restartQuiz,
+        loadQuiz
     };
 };

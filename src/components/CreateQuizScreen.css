@@ -1,0 +1,92 @@
+/* CreateQuizScreen.css */
+.create-quiz-screen {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--surface);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.create-quiz-screen h1 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.create-quiz-screen p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.text-input {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--text-secondary);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.file-input {
+    padding: 0.5rem;
+    background: var(--bg-secondary);
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+}
+
+.file-preview {
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.no-file-text {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.generate-button {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: opacity 0.2s;
+}
+
+.generate-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: var(--error);
+    padding: 0.75rem;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 0.5rem;
+    border: 1px solid var(--error);
+}
+
+small a {
+    color: var(--primary);
+    text-decoration: none;
+}
